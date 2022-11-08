@@ -7,6 +7,7 @@ using SCG.DIST.WEBCOMPLAINT.APPLICATION.Handlers.Customers.Queries;
 using SCG.DIST.WEBCOMPLAINT.APPLICATION.Interfaces.Repositories;
 using SCG.DIST.WEBCOMPLAINT.DOMAIN.DTOs.Customers;
 using SCG.DIST.WEBCOMPLAINT.SHAREDKERNEL.Attribute;
+using SCG.DIST.WEBCOMPLAINT.SHAREDKERNEL.Extensions;
 using SCG.DIST.WEBCOMPLAINT.SHAREDKERNEL.Filters;
 using SCG.DIST.WEBCOMPLAINT.SHAREDKERNEL.Models;
 
@@ -31,7 +32,7 @@ namespace SCG.DIST.WEBCOMPLAINT.API.Controllers
         [HttpGet]
         public async Task<ResponseResult<List<CustomerResponseDTO>>> GetAllCustomer()
         {
-
+            var userId = HttpContext?.User?.Identity?.GetUserId() ?? "1";
             var result = await _mediator.Send(new GetAllCustomerTableQuery());
             return ResponseResult<List<CustomerResponseDTO>>.Success(result);
         }
