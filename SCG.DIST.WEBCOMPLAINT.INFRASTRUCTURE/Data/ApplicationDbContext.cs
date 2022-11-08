@@ -16,6 +16,9 @@ namespace SCG.DIST.WEBCOMPLAINT.INFRASTRUCTURE.Data
             //ChangeTracker.LazyLoadingEnabled = false;
         }
 
+        public virtual DbSet<TB_USER> TB_USERs { get; set; }
+
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             SeederConfig.SeedConfig(modelBuilder);

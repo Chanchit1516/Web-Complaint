@@ -12,6 +12,7 @@ namespace SCG.DIST.WEBCOMPLAINT.APPLICATION.Interfaces.Repositories
         IProductRepository ProductRepository { get; }
         ICustomerRepository CustomerRepository { get; }
         IOrderRepository OrderRepository { get; }
+        IUserRepository UserRepository { get; }
         void Commit();
         Task CommitAsync();
     }

@@ -13,8 +13,10 @@ namespace SCG.DIST.WEBCOMPLAINT.DOMAIN.Entities
             //CreatedDateTime = DateTimeHelper.Now();
         }
         public DateTime CreatedDateTime { get; set; }
-        public int CreatedBy { get; set; }
-        public int? UpdatedBy { get; set; }
+        public string CreatedBy { get; set; }
+        public string? UpdatedBy { get; set; }
         public DateTime? UpdatedDateTime { get; set; }
+        public bool IsActive { get; set; }
+
     }
 }

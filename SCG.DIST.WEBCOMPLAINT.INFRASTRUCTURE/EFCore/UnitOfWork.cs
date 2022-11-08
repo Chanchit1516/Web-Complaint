@@ -12,6 +12,7 @@ namespace SCG.DIST.WEBCOMPLAINT.INFRASTRUCTURE.EFCore
         IProductRepository productRepository;
         ICustomerRepository customerRepository;
         IOrderRepository orderRepository;
+        IUserRepository userRepository;
 
 
         //private readonly ILogger _logger;
@@ -25,7 +26,7 @@ namespace SCG.DIST.WEBCOMPLAINT.INFRASTRUCTURE.EFCore
         public IProductRepository ProductRepository => productRepository ??= new ProductRepository(_dbContext);
         public ICustomerRepository CustomerRepository => customerRepository ??= new CustomerRepository(_dbContext);
         public IOrderRepository OrderRepository => orderRepository ??= new OrderRepository(_dbContext);
-
+        public IUserRepository UserRepository => userRepository ??= new UserRepository(_dbContext);
 
         public void Commit()
         {
