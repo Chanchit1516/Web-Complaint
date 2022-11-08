@@ -1,0 +1,20 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net6.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Autofac" Version="6.4.0" />
+		<PackageReference Include="AutoMapper" Version="11.0.1" />
+		<PackageReference Include="FluentValidation" Version="11.2.0" />
+		<PackageReference Include="MediatR" Version="10.0.1" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\SCG.DIST.WEBCOMPLAINT.DOMAIN\SCG.DIST.WEBCOMPLAINT.DOMAIN.csproj" />
+		<ProjectReference Include="..\SCG.DIST.WEBCOMPLAINT.SHAREDKERNEL\SCG.DIST.WEBCOMPLAINT.SHAREDKERNEL.csproj" />
+	</ItemGroup>
+</Project>
