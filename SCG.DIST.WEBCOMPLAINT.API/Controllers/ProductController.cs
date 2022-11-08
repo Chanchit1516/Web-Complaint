@@ -36,6 +36,7 @@ namespace SCG.DIST.WEBCOMPLAINT.API.Controllers
         }
 
         [HttpPost]
+        [AllowAnonymous]
         public async Task<ResponseResult<string>> InsertProduct([FromBody] CreateProductCommand request)
         {
             var result = await _mediator.Send(request);
