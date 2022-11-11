@@ -13,6 +13,7 @@ namespace SCG.DIST.WEBCOMPLAINT.APPLICATION.Interfaces.Repositories
         ICustomerRepository CustomerRepository { get; }
         IOrderRepository OrderRepository { get; }
         IUserRepository UserRepository { get; }
+        IComplaintRepository ComplaintRepository { get; }
         void Commit();
         Task CommitAsync();
     }

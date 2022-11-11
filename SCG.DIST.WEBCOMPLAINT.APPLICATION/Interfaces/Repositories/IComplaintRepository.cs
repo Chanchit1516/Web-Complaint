@@ -7,8 +7,8 @@ using System.Threading.Tasks;
 
 namespace SCG.DIST.WEBCOMPLAINT.APPLICATION.Interfaces.Repositories
 {
-    public interface IComplaintRepository : IGenericRepository<TB_COMPLAINT>
+    public interface IUserRepository : IGenericRepository<TB_USER>
     {
-        Task<TB_COMPLAINT> GetComplaintByCaseNoAsync(string caseNo);
+        Task<TB_USER> GetUserByUserIDAsync(int userID);
     }
 }

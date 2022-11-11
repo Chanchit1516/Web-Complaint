@@ -13,6 +13,7 @@ namespace SCG.DIST.WEBCOMPLAINT.INFRASTRUCTURE.EFCore
         ICustomerRepository customerRepository;
         IOrderRepository orderRepository;
         IUserRepository userRepository;
+        IComplaintRepository complaintRepository;
 
 
         //private readonly ILogger _logger;
@@ -27,6 +28,7 @@ namespace SCG.DIST.WEBCOMPLAINT.INFRASTRUCTURE.EFCore
         public ICustomerRepository CustomerRepository => customerRepository ??= new CustomerRepository(_dbContext);
         public IOrderRepository OrderRepository => orderRepository ??= new OrderRepository(_dbContext);
         public IUserRepository UserRepository => userRepository ??= new UserRepository(_dbContext);
+        public IComplaintRepository ComplaintRepository => complaintRepository ??= new ComplaintRepository(_dbContext);
 
         public void Commit()
         {

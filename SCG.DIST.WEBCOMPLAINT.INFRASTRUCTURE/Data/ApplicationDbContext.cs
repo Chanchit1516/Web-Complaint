@@ -17,6 +17,7 @@ namespace SCG.DIST.WEBCOMPLAINT.INFRASTRUCTURE.Data
         }
 
         public virtual DbSet<TB_USER> TB_USERs { get; set; }
+        public virtual DbSet<TB_COMPLAINT> TB_COMPLAINTs { get; set; }
 
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
